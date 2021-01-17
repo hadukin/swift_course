@@ -22,7 +22,6 @@ let winStreak: [[Int]] = [
     [7, 5, 3],
 ]
 
-
 class ViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
@@ -39,16 +38,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        runNewGame()
-        newGameButton.addTarget(self, action: #selector(newGame(_:)), for: .touchUpInside)
-    }
-    
-    @objc func newGame(_ sender: UIButton)  {
+        addTargetNewGameButton()
         runNewGame()
     }
     
     func runNewGame() {
-        addTargetsOnBUtton()
+        addTargetsOnButton()
         enableButtons(true)
         player1 = Player(selectedCell: [])
         player2 = Player(selectedCell: [])
@@ -65,7 +60,11 @@ class ViewController: UIViewController {
         }
     }
     
-    func addTargetsOnBUtton() {
+    func addTargetNewGameButton() {
+        newGameButton.addTarget(self, action: #selector(onPressNewGameButton(_:)), for: .touchUpInside)
+    }
+    
+    func addTargetsOnButton() {
         for button in buttons {
             button.addTarget(self, action: #selector(onPressedButton(_: )), for: .touchUpInside)
         }
@@ -82,8 +81,8 @@ class ViewController: UIViewController {
         }
     }
     
-    func noWinner() {
-        
+    @objc func onPressNewGameButton(_ sender: UIButton)  {
+        runNewGame()
     }
     
     @objc func onPressedButton(_ sender: UIButton) {
@@ -102,7 +101,7 @@ class ViewController: UIViewController {
             currentPlayer = currentPlayer == "Игрок 1" ? "Игрок 2" : "Игрок 1"
             count = count + 1
             sender.isEnabled = false
-            
+
             if (count == 9) {
                 winnerLabel.text = "Нет победителя"
                 newGameButton.isHidden = false
