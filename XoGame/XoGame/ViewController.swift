@@ -82,9 +82,13 @@ class ViewController: UIViewController {
         }
     }
     
-    @objc func onPressedButton(_ sender: UIButton ) {
+    func noWinner() {
+        
+    }
+    
+    @objc func onPressedButton(_ sender: UIButton) {
         if let index = sender.title(for: .normal) {
-
+            
             if(currentPlayer == "Игрок 1") {
                 sender.backgroundColor = UIColor.green
                 player1.selectedCell.append(Int(index)!)
@@ -98,6 +102,11 @@ class ViewController: UIViewController {
             currentPlayer = currentPlayer == "Игрок 1" ? "Игрок 2" : "Игрок 1"
             count = count + 1
             sender.isEnabled = false
+            
+            if (count == 9) {
+                winnerLabel.text = "Нет победителя"
+                newGameButton.isHidden = false
+            }
         }
     }
 }
