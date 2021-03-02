@@ -7,25 +7,26 @@
 
 import UIKit
 
-struct ErrorMessage {
-    var message: String?
-}
-
-class LoginErrorsViewController: UIViewController {
+class RecoverViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
-    var error: ErrorMessage?
-    
+    var screenType: ScreenType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let message = error?.message else {
+        guard let type = screenType else {
             return
         }
         
-        messageLabel.text = message
+        switch type {
+        case .recoverPassword:
+            messageLabel.text = "Восстановить пароль"
+        case .recoverUsername:
+            messageLabel.text = "Восстановить имя пользователя"
+        }
+
     }
     
     @IBAction func backButton(_ sender: UIButton) {

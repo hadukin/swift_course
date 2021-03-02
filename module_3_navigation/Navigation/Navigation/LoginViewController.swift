@@ -11,6 +11,8 @@ class LoginViewController: UIViewController {
     
     var recoverMessage: String = "Восстановить пароль";
     
+    var screenType: ScreenType?
+    
     @IBOutlet weak var textFieldEmail: UITextField!
     
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -41,15 +43,17 @@ class LoginViewController: UIViewController {
             errorLabel.textColor = UIColor.red
         }
     }
-    
+
     @IBAction func handleForgotPassword(_ sender: UIButton) {
         recoverMessage = "Восстановить пароль";
-        performSegue(withIdentifier: "LoginErrorsId", sender: nil)
+        screenType = .recoverPassword
+        performSegue(withIdentifier: "RecoverViewId", sender: nil)
     }
     
     @IBAction func handleForgetUsername(_ sender: UIButton) {
         recoverMessage = "Восстановить имя пользователя";
-        performSegue(withIdentifier: "LoginErrorsId", sender: nil)
+        screenType = .recoverUsername
+        performSegue(withIdentifier: "RecoverViewId", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,10 +64,11 @@ class LoginViewController: UIViewController {
         }
         
         switch segueId {
-        case "LoginErrorsId":
+        case "RecoverViewId":
             let newViewController = segue.destination
-            if let errorsViewController = newViewController as? LoginErrorsViewController {
-                errorsViewController.error = ErrorMessage(message: recoverMessage)
+            if let errorsViewController = newViewController as? RecoverViewController {
+                //errorsViewController.error = ErrorMessage(message: recoverMessage)
+                errorsViewController.screenType = screenType
             }
         default:
             guard let email = textFieldEmail.text,

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D87FFC5F25ED4A2200947890 /* LoginErrorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FFC5E25ED4A2200947890 /* LoginErrorsViewController.swift */; };
+		D87FFC5F25ED4A2200947890 /* RecoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FFC5E25ED4A2200947890 /* RecoverViewController.swift */; };
+		D87FFC6325EE2C8E00947890 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FFC6225EE2C8E00947890 /* Enums.swift */; };
 		D8DE573625ED1AAA009C7BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE573525ED1AAA009C7BEE /* AppDelegate.swift */; };
 		D8DE573825ED1AAA009C7BEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE573725ED1AAA009C7BEE /* SceneDelegate.swift */; };
 		D8DE573A25ED1AAA009C7BEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE573925ED1AAA009C7BEE /* LoginViewController.swift */; };
@@ -18,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D87FFC5E25ED4A2200947890 /* LoginErrorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorsViewController.swift; sourceTree = "<group>"; };
+		D87FFC5E25ED4A2200947890 /* RecoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverViewController.swift; sourceTree = "<group>"; };
+		D87FFC6225EE2C8E00947890 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		D8DE573225ED1AAA009C7BEE /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DE573525ED1AAA009C7BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DE573725ED1AAA009C7BEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +70,8 @@
 				D8DE573E25ED1AAA009C7BEE /* Assets.xcassets */,
 				D8DE574025ED1AAA009C7BEE /* LaunchScreen.storyboard */,
 				D8DE574325ED1AAA009C7BEE /* Info.plist */,
-				D87FFC5E25ED4A2200947890 /* LoginErrorsViewController.swift */,
+				D87FFC5E25ED4A2200947890 /* RecoverViewController.swift */,
+				D87FFC6225EE2C8E00947890 /* Enums.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -145,8 +148,9 @@
 			files = (
 				D8DE573A25ED1AAA009C7BEE /* LoginViewController.swift in Sources */,
 				D8DE573625ED1AAA009C7BEE /* AppDelegate.swift in Sources */,
-				D87FFC5F25ED4A2200947890 /* LoginErrorsViewController.swift in Sources */,
+				D87FFC5F25ED4A2200947890 /* RecoverViewController.swift in Sources */,
 				D8DE574B25ED2909009C7BEE /* ProfileViewController.swift in Sources */,
+				D87FFC6325EE2C8E00947890 /* Enums.swift in Sources */,
 				D8DE573825ED1AAA009C7BEE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

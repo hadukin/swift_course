@@ -105,17 +105,17 @@
                         <outlet property="textFieldEmail" destination="in6-B6-Gy5" id="KkP-mK-P1m"/>
                         <outlet property="textFieldPassword" destination="dgC-gJ-Ck6" id="R67-J7-zFP"/>
                         <segue destination="zDR-3V-xeQ" kind="show" identifier="ProfileViewId" id="wDR-ed-Ptj"/>
-                        <segue destination="QPa-RX-vHM" kind="show" identifier="LoginErrorsId" id="q2d-FI-GYf"/>
+                        <segue destination="QPa-RX-vHM" kind="show" identifier="RecoverViewId" id="q2d-FI-GYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="43" y="138"/>
         </scene>
-        <!--Login Errors View Controller-->
+        <!--Recover View Controller-->
         <scene sceneID="z80-KN-UMT">
             <objects>
-                <viewController id="QPa-RX-vHM" customClass="LoginErrorsViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QPa-RX-vHM" customClass="RecoverViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ld-Nu-mOG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
