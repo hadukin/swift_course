@@ -75,8 +75,6 @@ class ViewController: UIViewController, UIPickerViewDataSource {
         do {
             let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
             
-            print(jsonObject)
-            
             guard
                 let json = jsonObject as? [[String: Any]],
                 let companyName = json[0]["shortName"] as? String,
@@ -109,6 +107,11 @@ class ViewController: UIViewController, UIPickerViewDataSource {
     
     private func requestQuoteUpdate() {
         activityIndicator.startAnimating()
+        companyNameLabel.text = "-"
+        companySymbolLabel.text = "-"
+        companyMarketlabel.text = "-"
+        regularMarketVolumeLabel.text = "-"
+        
         let selectedRow = companyPickerView.selectedRow(inComponent: 0)
         let selectedSymbol = Array(companies.values)[selectedRow]
         requestQuote(for: selectedSymbol)
