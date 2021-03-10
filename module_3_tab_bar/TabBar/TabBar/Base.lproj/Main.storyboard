@@ -69,6 +69,34 @@
             </objects>
             <point key="canvasLocation" x="1705.7971014492755" y="-240.40178571428569"/>
         </scene>
+        <!--Навыки-->
+        <scene sceneID="oSk-bR-dhK">
+            <objects>
+                <viewController id="vQM-ao-xND" customClass="SkillsViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpC-eL-xZv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Навыки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q3-nY-XLs">
+                                <rect key="frame" x="176.5" y="437.5" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cJs-PC-DA1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Q3-nY-XLs" firstAttribute="centerY" secondItem="WpC-eL-xZv" secondAttribute="centerY" id="j5j-wx-J9o"/>
+                            <constraint firstItem="5Q3-nY-XLs" firstAttribute="centerX" secondItem="WpC-eL-xZv" secondAttribute="centerX" id="sQP-JM-XuO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Навыки" image="flame" catalog="system" id="EKr-Ad-tLX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCl-OT-h7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2547.826086956522" y="137.94642857142856"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="23K-ek-NQx">
             <objects>
@@ -81,6 +109,7 @@
                     <connections>
                         <segue destination="OQC-lM-1my" kind="relationship" relationship="viewControllers" id="97h-Lt-ute"/>
                         <segue destination="elb-Pr-dGE" kind="relationship" relationship="viewControllers" id="XJS-dB-3eR"/>
+                        <segue destination="vQM-ao-xND" kind="relationship" relationship="viewControllers" id="9WS-v2-BBz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORa-tP-dnx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,6 +118,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flame" catalog="system" width="108" height="128"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
